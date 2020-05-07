@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>价值100万的H5</title>
+    <!-- <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="  http://qiniu.wbdev.cn/0426/img/logo.png" alt="" class="logo">
+        <div class="page1">
+            <img src="  http://qiniu.wbdev.cn/0426/img/page1_bg.png" alt="" class="page1_bg">
+            <img src="  http://qiniu.wbdev.cn/0426/img/page1_welcome.png" alt="" class="page1_welcome">
+            <img src="  http://qiniu.wbdev.cn/0426/img/page1_main.png" alt="" class="page1_main">
+            <div class="click_main">
+                <img src="  http://qiniu.wbdev.cn/0426/img/page1_smile.png" alt="" class="page1_smile tada">
+                <img src="  http://qiniu.wbdev.cn/0426/img/page1_isclick.png" alt="" class="page1_isclick">
+            </div>
+            <p class="numInfo">已经有<span class="num">0</span>个小伙伴领走了笑容币</p>
+        </div>
+        <div class="page2">
+            <img src="  http://qiniu.wbdev.cn/0426/img/page2_welcome.png" alt="" class="page2_welcome">
+            <div class="warpper">
+                <div class="left">
+                    <img src="  http://qiniu.wbdev.cn/0426/img/left.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t1.jpg"></div> -->
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t2.jpg"></div>
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t3.jpg"></div>
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t4.jpg"></div>
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t5.jpg"></div>
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t6.jpg"></div>
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t7.jpg"></div>
+                            <div class="swiper-slide"><img src="http://qiniu.wbdev.cn/0426/img/t8.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="  http://qiniu.wbdev.cn/0426/img/right.png" alt="">
+                </div>
+            </div>
+            <p class="page2_info">左右滑动，选择你喜欢的笑容纸币样式</p>
+            <img src="  http://qiniu.wbdev.cn/0426/img/upImg.png" alt="" class="upImg">
+            <p class="btn_info">你的照片不会被存储起来,请放心上传</p>
+            <input type="file" name="" id="upFile" accept="image/*">
+            <img src="#" alt="" class="imgFile">
+            <canvas id="myCanvas"></canvas>
+        </div>
+        <div class="page3">
+            <img src="  http://qiniu.wbdev.cn/0426/img/page3_bg.png" alt="" class="page3_bg">
+            <img src="  http://qiniu.wbdev.cn/0426/img/page3_main.png" alt="" class="page3_main">
+            <!-- 这是合成的图片 -->
+            <img src="#" alt="" class="page3_composition">
+            <img src="  http://qiniu.wbdev.cn/0426/img/longTap.png" alt="" class="longTap">
+            <img src="http://qiniu.wbdev.cn/0426/img/reSelect.png" alt="" class="reselect">
+            <div class="page3_info">
+                <p>前往指定地点，兑换集合了</p>
+                <p>商家优惠券价值百万的笑红书</p>
+            </div>
+            <img src="  http://qiniu.wbdev.cn/0426/img/exchange.png" alt="" class="exchange">
+        </div>
+        <img src="  http://qiniu.wbdev.cn/0426/img/bottomImg.png" alt="" class="bottomImg">
+    </div>
+    <div class="loading">
+        <div class="loadInfo">
+            <img src="  http://qiniu.wbdev.cn/0426/img/loading.png" alt="">
+            <p>生成中~</p>
+        </div>
+    </div>
+    <div class="mask_info">
+        <div class="mask_content">
+            <img src="http://qiniu.wbdev.cn/0426/img/mask_info.png" alt="" class="mask_img">
+            <img src="http://qiniu.wbdev.cn/0426/img/cancel.png" alt="" class="cancel">
+            <img src="http://qiniu.wbdev.cn/0426/img/nav.png" alt="" class="nav n1">
+            <img src="http://qiniu.wbdev.cn/0426/img/nav.png" alt="" class="nav n2">
+        </div>
+    </div>
+    <audio preload="autoplay" id="car_audio" src="./bgm.mp3" loop></audio>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script type="text/javascript" src="http://yanrunweb.wbdev.cn/wxjslib/wx-share.js"></script>
+    <script>
+        $(document).ready(function () {
+            var url = window.location.href.split("#")[0];
+            console.log(url)
+            var params = { //分享信息
+                url: url,
+                title: '一个笑容，价值100万？究竟是何方盛世美颜？', //标题
+                desc: '没有什么是一个笑容解决不了的。', //详情
+                link: 'http://yanrunweb.wbdev.cn/face/index.html', // 分享跳转链接
+                imgUrl: 'http://qiniu.wbdev.cn/0426/share.jpg', //分享图标
+                shareAfter: function () { //分享回调
+
+                }
+            }
+            //调用函数
+            wsShare.register(params);
+
+            const page1 = $('.page1')
+            const page2 = $('.page2')
+            var Orientation, canvasUrl
+
+            // var imgurl = $('.swiper-slide-active img').attr("src"); //用户选择的模板
+            var swiper = new Swiper('.swiper-container', {
+                pagination: {
+
+                },
+            });
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                document.getElementById('car_audio').play();
+            }, false);
+
+            $('.n1').on('click', function () {
+                window.open('https://router.map.qq.com/short?l=c84f6dee61a87c1a15c4f73d01564111')
+            })
+            $('.n2').on('click', function () {
+                window.open('https://router.map.qq.com/short?l=f7838baca6381bf4520f9350d62c2052')
+            })
+
+            $('.exchange').on('click', function () {
+                $('.mask_info').fadeIn()
+            })
+
+            $('.cancel').on('click', function () {
+                $('.mask_info').fadeOut()
+            })
+
+            //page1笑脸点击事件
+            $('.page1_smile').on('click', function () {
+                page1.fadeOut()
+
+                // page2.fadeIn('slow')
+            })
+
+            $('.reselect').on('click', function () {
+                $('.imgFile').attr('src','#')
+                page2.show()
+                $('.bottomImg').show()
+            })
+
+            //page2按钮点击事件
+            $('.upImg').on('click', function () {
+                $('#upFile').click()
+            })
+
+            $('.loading').on('touchstart', e => {
+                e.preventDefault()
+            }, false)
+
+            $('#upFile').on('change', function () {
+                // 这是处理图片黑白的方法                    
+                previewFile()
+            })
+
+            function getNum() {
+                const url = 'http://yanrunweb.wbdev.cn/api/face/getView.jhtml'
+                $.ajax({
+                    url,
+                    type: 'get',
+                    success: function (data) {
+                        let objData = JSON.parse(data)
+                        if (objData.appcode == 1) {
+                            $('.num').text(objData.views)
+                        } else {
+                            alert(objData.appmsg)
+                        }
+                    },
+
+                    fail: function (err) {
+                        alert(err.msg)
+                    }
+
+                })
+            }
+
+            function changeFace() {
+                const url = 'http://yanrunweb.wbdev.cn/api/face/getFaceFusion.jhtml'
+                // const imgFile = document.querySelector('.imgFile')
+                const imgFileBase = $('.imgFile').attr('src')
+                const image_templateUrl = $('.swiper-slide-active')
+                let data
+
+                data = {
+                    'image_target': encodeURIComponent(imgFileBase),
+                    'type': swiper.activeIndex + 1 + ''
+                    //'image_template': encodeURIComponent(base)
+                }
+                $.ajax({
+                    url,
+                    data,
+                    type: 'post',
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.appcode == -1) {
+                            alert(data.appmsg)
+                            document.querySelector('input[type=file]').files.length = 0
+                            $('.loading').hide()
+                        } else if (data.appcode == 1) {
+                            var page3_composition = document.querySelector('.page3_composition');
+                            $(page3_composition).attr('src', data.path)
+                            var timer = setInterval(function () {
+                                if (page3_composition.complete) {
+                                    if (page3_composition.src) {
+                                        page2.hide()
+                                        $('.bottomImg').hide()
+                                        $('.loading').hide()
+                                    }
+                                    clearInterval(timer)
+                                }
+                            }, 50)
+                        }
+                    },
+                    fail: function (err) {
+                        alert(err.msg)
+                    }
+                })
+
+
+
+            }
+
+            function compress(base) {
+                // alert(base)
+                // 缩放图片需要的canvas
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                var img = new Image();
+                img.src = base
+
+                // base64地址图片加载完毕后
+                img.onload = function () {
+                    // alert('tag', '')
+                    // 图片原始尺寸
+                    var originWidth = this.width;
+                    var originHeight = this.height;
+                    // 最大尺寸限制
+                    var maxWidth = 400,
+                        maxHeight = 400;
+                    // 目标尺寸
+                    var targetWidth = originWidth,
+                        targetHeight = originHeight;
+                    // 图片尺寸超过400x400的限制
+                    if (originWidth > maxWidth || originHeight > maxHeight) {
+                        if (originWidth / originHeight > maxWidth / maxHeight) {
+                            // 更宽，按照宽度限定尺寸
+                            targetWidth = maxWidth;
+                            targetHeight = Math.round(maxWidth * (originHeight / originWidth));
+                        } else {
+                            targetHeight = maxHeight;
+                            targetWidth = Math.round(maxHeight * (originWidth / originHeight));
+                        }
+                    }
+
+                    // canvas对图片进行缩放
+                    canvas.width = targetWidth;
+                    canvas.height = targetHeight;
+
+
+                    // 清除画布
+                    // context.clearRect(0, 0, targetWidth, targetHeight);
+                    // 图片压缩
+                    context.drawImage(img, 0, 0, targetWidth, targetHeight);
+
+                    var length = canvas.width * canvas.height;
+                    img = context.getImageData(0, 0, canvas.width, canvas.height);
+                    for (var i = 0; i < length * 4; i += 4) {
+                        var myRed = img.data[i];
+                        var myGreen = img.data[i + 1];
+                        var myBlue = img.data[i + 2];
+                        myGray = parseInt((myRed + myGreen + myBlue) / 3);
+                        img.data[i] = myGray;
+                        img.data[i + 1] = myGray;
+                        img.data[i + 2] = myGray;
+                    }
+                    context.putImageData(img, 0, 0);
+                    var preview = document.querySelector('.imgFile');
+                    $(preview).attr('src', canvas.toDataURL("image/jpeg"))
+                    var timer = setInterval(function () {
+                        if (preview.complete) {
+
+                            if (preview.src) {
+                                $('.loading').show()
+                                console.log(preview.src)
+                                changeFace()
+                            }
+                            clearInterval(timer)
+                        }
+                    }, 50)
+
+
+                    // canvasUrl = canvas.toDataURL("image/png")
+                    // $('.imgFile').attr('src', canvas.toDataURL("image/png"))
+                    // convertToGray()
+                }
+            }
+
+
+            function previewFile() {
+                var preview = document.querySelector('.imgFile');
+                var file = document.querySelector('input[type=file]').files[0];
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                EXIF.getData(file, function () {
+                    Orientation = EXIF.getTag(this, 'Orientation');
+                    if (Orientation && Orientation != 1) {
+                        fileFun(Orientation, reader.result)
+                    } else {
+                        compress(reader.result);
+                    }
+                    console.log(Orientation);
+                });
+
+            }
+
+
+            function fileFun(Orientation, base) {
+                // var reader = new FileReader();
+                var image = new Image();
+                var dataUrl
+                // reader.readAsDataURL(file);
+
+                // reader.onload = function (ev) {
+                image.src = base
+                image.onload = function () {
+                    var imgWidth = this.width,
+                        imgHeight = this.height; //获取图片宽高
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx = canvas.getContext('2d');
+                    canvas.width = imgWidth;
+                    canvas.height = imgHeight;
+                    if (Orientation && Orientation != 1) {
+                        switch (Orientation) {
+                            case 6: // 旋转90度
+                                canvas.width = imgHeight;
+                                canvas.height = imgWidth;
+                                ctx.rotate(Math.PI / 2);
+                                ctx.drawImage(this, 0, -imgHeight, imgWidth, imgHeight);
+                                break;
+                            case 3: // 旋转180度
+                                ctx.rotate(Math.PI);
+                                ctx.drawImage(this, -imgWidth, -imgHeight, imgWidth, imgHeight);
+                                break;
+                            case 8: // 旋转-90度
+                                canvas.width = imgHeight;
+                                canvas.height = imgWidth;
+                                ctx.rotate(-Math.PI / 2);
+                                ctx.drawImage(this, -imgWidth, 0, imgWidth, imgHeight);
+                                break;
+                        }
+
+                        // $('.imgFile').attr('src', canvas.toDataURL("image/jpeg", 0.8))
+                        dataUrl = canvas.toDataURL("image/jpeg")
+                        compress(dataUrl)
+                    } else {
+                        ctx.drawImage(this, 0, 0, imgWidth, imgHeight);
+                    }
+                    // canvas.toDataURL("image/jpeg", 0.8); //canvase 转为base64
+
+                    // var blob = dataURLtoBlob(dataurl); //base64转为blog
+                }
+                // }
+
+            }
+
+
+            //传入图片路径，返回base64
+            function getBase64(img) {
+                function getBase64Image(img, width, height) { //width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
+                    var canvas = document.createElement("canvas");
+                    canvas.width = width ? width : img.width;
+                    canvas.height = height ? height : img.height;
+
+                    var ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    var dataURL = canvas.toDataURL();
+                    return dataURL;
+                }
+                var image = new Image();
+                image.crossOrigin = '';
+                image.src = img;
+                var deferred = $.Deferred();
+                if (img) {
+                    image.onload = function () {
+                        deferred.resolve(getBase64Image(image, '1206', '660')); //将base64传给done上传处理
+                    }
+                    return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
+                }
+            }
+
+            getNum()
+
+        })
+    </script>
+</body>
+
+</html>

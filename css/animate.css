@@ -1,0 +1,133 @@
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translate3d(0, 0, 0);
+    }
+
+    40% {
+        opacity: 0.9;
+        transform: scale(1.4);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(0.75);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(0.89);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+  
+    @keyframes bounceRight {
+
+        0% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(15%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    .bounceRight {
+        -webkit-animation-name: bounceRight;
+        animation-name: bounceRight;
+    }
+
+
+    @keyframes bounceScale {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    @keyframes bounceLeft {
+
+        0%{
+            transform: translate(0,0);
+        }
+
+        50%{
+            transform: translate(-15%, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* .tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+} */

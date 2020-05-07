@@ -1,0 +1,362 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 13.333333vw;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #db224e;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0.32rem;
+    width: 6.26rem;
+    height: auto;
+}
+.page1,
+.page2,
+.page3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.page1_bg{
+    width: 100%;
+    height: auto;
+}
+
+.page1_welcome,
+.page1_main,
+.click_main,
+.page1_smile{
+    position: absolute;
+    height: auto;
+    left: 50%;
+}
+.page1_welcome{
+    top: 2.758rem;
+    width: 5.52rem;
+    margin-left: -2.76rem;
+    opacity: 0;
+    animation-name: bounceIn;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+.page1_main{
+    width: 5.68rem;
+    top: 5.45rem;
+    margin-left: -2.84rem;
+    opacity: 0;
+    animation-name: bounceIn;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+.click_main{
+    width: 100%;
+    top: 8.34rem;
+    height: 1.88rem;
+    margin-left: -50%;
+
+}
+.page1_smile{
+    z-index: 99;
+    width: 1.88rem;
+    top: 0;
+    margin-left: -0.94rem;
+    animation-name: tada;
+    animation-duration: 1000ms;
+    /* animation-timing-function: ease-in;
+    animation-fill-mode: forwards; */
+    animation-iteration-count: infinite;
+}
+.page1_isclick{
+    position: absolute;
+    height: auto;
+    left: 5rem;
+    width: 1.73rem;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.bottomImg{
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    width: 100%;
+    height: auto;
+    z-index: 95;
+}
+.numInfo{
+    line-height: 0;
+    margin-top: 0.6rem;
+    font-size:0.28rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 99;
+}
+.num{
+    color: #FFD32D;
+    padding: 0 0.1rem;
+}
+
+
+/* page2 */
+.page2{
+    /* display: none; */
+}
+.page2_welcome{
+    display: block;
+    margin: 1.76rem auto 0.54rem;
+    height: auto;
+    width: 5.33rem;
+}
+.warpper{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+.left, .right{
+    width: 0.37rem;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    /* height: ; */
+}
+
+.left{
+    animation-name: bounceLeft;
+}
+.right{
+    animation-name: bounceRight;
+}
+.left img,
+.right img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    /* height: 100%; */
+    width: 6.5rem;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    padding: 0.1rem;
+    box-sizing: border-box;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 2px 5px #333;
+
+}
+.page2_info{
+    font-size: 0.28rem;
+    color:#fff;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+.upImg{
+    display: block;
+    width: 4.07rem;
+    height: auto;
+    margin: 1.1rem auto 0;
+    z-index: 99;
+    position: relative;
+}
+#upFile {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.imgFile,
+#myCanvas{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.imgFile {
+    display: block;
+}
+.btn_info{
+    margin-top: 0.18rem;
+    font-size: 0.24rem;
+    color:rgba(255, 155, 179, 1);
+    text-align: center;
+}
+
+.page3{
+    text-align: center;
+    line-height: 0;
+}
+.page3_bg{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.page3_main{
+    /* display: block; */
+    margin-top: 1.58rem;
+    width: 4.77rem;
+    height: 2.33rem;
+    z-index: 10;
+    position: relative;
+}
+.page3_composition{
+    margin-top: 0.34em;
+    height: 3.31rem;
+    width: 6.53rem;
+    z-index: 10;
+    position: relative;
+}
+.longTap{
+    width: 3.69rem;
+    height: auto;
+    margin-top: 0.3rem;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: bounceScale;
+
+
+}
+.reselect{
+    position: relative;
+    width: 2.59rem;
+    height: auto;
+    display: block;
+    margin: 0.3rem auto;
+    z-index: 999;
+}
+.page3_info{
+    margin-top: 0.7rem;
+}
+.page3_info p{
+    text-align: center;
+    font-size:0.26rem;
+    font-family:Source Han Sans CN;
+    color:rgba(255, 255, 255, 0.8);
+    line-height:0.39rem;
+}
+.exchange{
+    margin-top: 0.39rem;
+    width: 3.7rem;
+    height: auto;
+    position: relative;
+    z-index: 99;
+}
+.loading {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+}
+
+.loadInfo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 0.18rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.loadInfo img {
+    width: 0.7rem;
+    height: 0.7rem;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    animation-name: rotate;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.loadInfo p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.mask_info{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 999;
+}
+.mask_content{
+    width: 6.66rem;
+    height: 10.8rem;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 9px;
+}
+.mask_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.cancel{
+    height: 0.45rem;
+    width: 0.45rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+}
+.nav{
+    width: 1.22rem;
+    height: 0.43rem;
+    position: absolute;
+}
+.nav.n1 {
+    top: 7.55rem;
+    right: 0.43rem;
+}
+
+.nav.n2 {
+    top: 8.6rem;
+    right: 0.43rem;
+}
+#car_audio{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
